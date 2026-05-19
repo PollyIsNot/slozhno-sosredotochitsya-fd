@@ -1,12 +1,25 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+html.theme-light {
+  --text-primary: var(--palette-dark-muted, #353430);
+  --accent-color: var(--palette-light-bright, #ff8dcb); /* Возвращаем прежний розовый */
+  --decor-color: var(--palette-dark-muted, #353430); /* Наш новый цвет для рамок, кнопок и заголовков */
+  --brand-color: var(--palette-light-accent, #ffc2e6);
+  --highlight-bg: var(--palette-dark-muted, #353430);
+  --accent-alpha: var(--decor-color, #ff0070);
+  --bg-primary: var(--palette-light-base, #fff1f7);
+  --cover-bg-image: url("../images/cover-image-light.png");
+  --badge-display: hidden;
+}
 
-:root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-primary: var(--palette-dark-muted, #353430);
+    --accent-color: var(--palette-light-bright, #ff8dcb); /* Возвращаем прежний розовый */
+    --decor-color: var(--palette-dark-muted, #353430); /* Наш новый цвет */
+    --brand-color: var(--palette-light-accent, #ffc2e6);
+    --highlight-bg: var(--palette-dark-muted, #353430);
+    --accent-alpha: var(--decor-color, #ff0070);
+    --bg-primary: var(--palette-light-base, #fff1f7);
+    --cover-bg-image: url("../images/cover-image-light.png");
+    --badge-display: hidden;
+  }
 }

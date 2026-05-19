@@ -1,4 +1,27 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+
+  --palette-light-base: #fff1f4;
+  --palette-light-muted: #f1b2ce;
+  --palette-light-accent: #ffc2e6;
+  --palette-light-bright: #ff8dcb;
+  
+  --palette-dark-base: #000028;
+  --palette-dark-muted: #353430;
+  --palette-dark-muted-alpha: #35343040;
+  
+  --palette-brand-primary: #db00ff;
+  --palette-brand-secondary: #ff0070;
+  --palette-brand-secondary-alpha: #ff007040;
+
+  --bg-primary: var(--palette-dark-base);
+  --text-primary: var(--palette-dark-muted);
+  --brand-color: var(--palette-brand-primary);
+  --accent-color: var(--palette-brand-secondary);
+  --accent-alpha: var(--palette-brand-secondary-alpha);
+  --highlight-bg: var(--palette-dark-base);
+  --decor-color: var(--palette-brand-secondary);
+  
+  --badge-display: visible;
+  --font-main: "IBM Plex mono", monospace;
+  --cover-bg-image: url("../images/cover-image.png");
+}

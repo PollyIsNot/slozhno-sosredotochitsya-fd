@@ -1,5 +1,378 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.fx-text-shadow {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
 
-.page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+.app-layout {
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  font-size: 18px;
+  line-height: 23.4px;
+  background-color: var(--bg-primary);
+  background-image: var(--cover-bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 10px;
+}
+
+.info-card__title{
+  font-size: 18px;
+}
+
+.view-cover {
+  display: flex;
+  justify-content: center;
+  padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  min-block-size: 658px;
+}
+
+.framed-wrapper {
+  position: relative;
+}
+
+.framed-wrapper::before,
+.framed-wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.framed-wrapper::before {
+  position: absolute;
+  top: 0px;
+  right: 2px;
+  border-inline-end: 1px solid var(--decor-color); /* Меняем здесь */
+  border-block-start: 1px solid var(--decor-color); /* И здесь */
+}
+.framed-wrapper::after {
+  position: absolute;
+  left: -1px;
+  bottom: 16px;
+  border-inline-start: 1px solid var(--decor-color); /* Меняем здесь */
+  border-block-end: 1px solid var(--decor-color); /* И здесь */
+}
+
+.text-link {
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.text-link:focus {
+  outline: 0;
+}
+
+.text-link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.recording-badge {
+  position: absolute;
+  z-index: -1;
+  visibility: var(--badge-display);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  inset-inline-end: 10px;
+}
+
+.recording-badge::before {
+  content: "REC";
+  color: var(--accent-color);
+  line-height: 24px;
+}
+
+.recording-badge::after {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px var(--accent-color);
+  background: var(--accent-color);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.main-heading {
+  color: var(--brand-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.section-heading {
+  color: var(--decor-color); /* Меняем здесь */
+  font-weight: 700;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.fx-highlight {
+  color: var(--highlight-bg);
+  background: var(--accent-color);
+}
+
+.content-section {
+  display: grid;
+  gap: 20px;
+}
+
+.section-visuals {
+  gap: 10px;
+  padding-block-end: 50px;
+}
+
+.section-solutions__subtitle {
+  margin-block-end: 20px;
+}
+
+.content-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.info-card {
+  display: grid;
+  gap: 10px;
+  inline-size: 100%;
+}
+
+.photo-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.photo-grid__img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.app-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 34.5% 36.3% 27.3%;
+  gap: 1px;
+  min-block-size: 668px;
+  block-size: 100vh;
+}
+
+.theme-switcher {
+  justify-self: end;
+  align-self: start;
+  margin-block-start: 20px;
+}
+
+.theme-switcher__list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 45px;
+  gap: 12px;
+  padding-inline-end: 2px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 2px 12px;
+  color: var(--decor-color); /* Меняем здесь */
+  line-height: 18px;
+  text-transform: lowercase;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  border-color: currentColor;
+  cursor: default;
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--accent-alpha);
+}
+
+.header__theme-menu-button:focus {
+  outline: 0;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end-color: currentColor;
+}
+
+.app-header__subtitle {
+  align-self: end;
+  grid-row: 3 / 4;
+  justify-self: center;
+  align-self: flex-start;
+  max-inline-size: 355px;
+  margin-block-end: 20px;
+  color: var(--highlight-bg);
+  font-weight: 700;
+  font-size: inherit;
+  line-height: inherit;
+  background: var(--accent-color);
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  padding: 30px 0px 0px 0px;
+}
+
+.app-footer {
+  place-items: center;
+}
+
+@media (width >= 768px) {
+  
+  .app-layout{
+    padding: 0;
+  }
+
+  .recording-badge {
+    inset-inline-end: 28px;
+    inset-block-start: 20px;
+  }
+
+  .main-heading {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .content-section {
+    grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
+  }
+
+  .section-causes__grid {
+    grid-column-start: span 2;
+  }
+
+  .section-visuals {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-block-end: 60px;
+  }
+
+  .section-solutions__grid {
+    grid-column-start: 2;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .photo-grid__item:first-child,
+  .photo-grid__item:last-child {
+    grid-column-start: span 2;
+  }
+
+  .photo-grid__item:nth-child(2),
+  .photo-grid__item:nth-child(3) {
+    grid-row-start: span 2;
+  }
+
+  .app-header {
+    grid-template-rows: 45.3% 10.7% 42.4%;
+    min-block-size: 1024px;
+    block-size: 100vh;
+  }
+
+  .framed-wrapper::before{
+    top: 19px;
+    right: 20px;
+  }
+
+  .framed-wrapper::after{
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .theme-switcher {
+    margin-block-start: 146px;
+  }
+
+  .theme-switcher__list{
+    padding-inline-end: 20px;
+  }
+
+  .app-header__subtitle {
+    justify-self: end;
+    align-self: center;
+    margin-inline-end: 20px;
+    max-inline-size: 364px;
+  }
+
+  .main-content {
+    gap: 80px;
+    padding: 60px 20px 0px;
+  }
+
+  .app-footer{
+    min-block-size: 1024px;
+    block-size: 100vh;
+  }
+}
+
+@media (width >= 1024px) {
+
+  .app-header{
+    grid-template-rows: 41.7% 29% 16.7%;
+    min-block-size: 768px;
+  }
+
+  .app-header__subtitle{
+    margin-inline-end: 22px;
+     max-inline-size: 490px;
+  }
+
+  .main-heading {
+    text-shadow: 4px 4px 0 var(--palette-brand-secondary);
+  }
+
+  .recording-badge{
+    inset-inline-end: 30px;
+    inset-block-start: 21px;
+  }
+
+  .framed-wrapper::before{
+    top: 21px;
+    right: 22px;
+  }
+
+  .framed-wrapper::after{
+    bottom: 20px;
+    left: 19px;
+  }
+
+  .content-section {
+    column-gap: 30px;
+  }
+  
+  .section-causes__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .theme-switcher {
+    justify-self: center;
+    margin-inline-start: 19px;
+    margin-block-start: -25px;
+    margin-block-end: 215px;
+  }
+  
+  .theme-switcher__list {
+    flex-direction: row;
+  }
+
+  .app-footer{
+    min-block-size: 770px;
+  }
 }
