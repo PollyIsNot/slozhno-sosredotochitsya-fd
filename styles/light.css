@@ -1,7 +1,7 @@
 html.theme-light {
   --text-primary: var(--palette-dark-muted, #353430);
-  --accent-color: var(--palette-light-bright, #ff8dcb); /* Возвращаем прежний розовый */
-  --decor-color: var(--palette-dark-muted, #353430); /* Наш новый цвет для рамок, кнопок и заголовков */
+  --accent-color: var(--palette-light-bright, #ff8dcb);
+  --decor-color: var(--palette-dark-muted, #353430);
   --brand-color: var(--palette-light-accent, #ffc2e6);
   --highlight-bg: var(--palette-dark-muted, #353430);
   --accent-alpha: var(--decor-color, #ff0070);
@@ -13,8 +13,8 @@ html.theme-light {
 @media (prefers-color-scheme: light) {
   :root {
     --text-primary: var(--palette-dark-muted, #353430);
-    --accent-color: var(--palette-light-bright, #ff8dcb); /* Возвращаем прежний розовый */
-    --decor-color: var(--palette-dark-muted, #353430); /* Наш новый цвет */
+    --accent-color: var(--palette-light-bright, #ff8dcb);
+    --decor-color: var(--palette-dark-muted, #353430);
     --brand-color: var(--palette-light-accent, #ffc2e6);
     --highlight-bg: var(--palette-dark-muted, #353430);
     --accent-alpha: var(--decor-color, #ff0070);
