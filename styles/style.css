@@ -228,9 +228,10 @@
 }
 
 .footer {
+  display: grid;
   place-items: center;
-  block-size: 100vh;
-  min-block-size: 668px;
+  min-height: 668px;
+  height: 100vh;
 }
 
 @media (width >= 768px) {
@@ -318,8 +319,8 @@
   }
 
   .footer {
-    min-block-size: 1024px;
-    block-size: 100vh;
+    min-height: 1024px;
+    height: 100vh;
   }
 }
 
@@ -374,6 +375,6 @@
   }
 
   .footer {
-    min-block-size: 770px;
+    min-height: 770px;
   }
 }
